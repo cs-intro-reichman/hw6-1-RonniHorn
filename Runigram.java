@@ -118,7 +118,8 @@ public class Runigram {
 	// lum = 0.299 * r + 0.587 * g + 0.114 * b, and returns a Color object consisting
 	// the three values r = lum, g = lum, b = lum.
 	private static Color luminance(Color pixel) {
-		Color c = new Color((int)(pixel.getRed()*0.299), (int)(pixel.getGreen()*0.587), (int)(pixel.getBlue()*0.144));
+		int color = (int)((pixel.getRed()*0.299) + (pixel.getGreen()*0.587) + (pixel.getBlue()*0.144));
+		Color c = new Color (color, color, color);
 		return c;
 	}
 	
